@@ -10,12 +10,15 @@ namespace Rei01.Buhin
     {
         private List<IBuhin> _buhins = new List<IBuhin>();
 
-        public Youki(string name)
+        public Youki(string name, int lebel)
         {
             Name = name;
+            Lebel = lebel;
         }
 
         public string Name { get; }
+
+        public int Lebel { get; }
         public void Execute()
         {
             MessageBox.Show(Name);
@@ -33,7 +36,7 @@ namespace Rei01.Buhin
 
         public override string ToString()
         {
-            return Name;
+            return string.Concat(Enumerable.Repeat("+", Lebel)) + Name;
         }
 
     }

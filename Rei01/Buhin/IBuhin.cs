@@ -9,6 +9,7 @@ namespace Rei01.Buhin
     internal interface IBuhin
     {
         string Name { get; }
+        int Lebel { get; }
         void Execute();
     }
 }
