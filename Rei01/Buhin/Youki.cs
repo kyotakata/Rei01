@@ -8,7 +8,14 @@ namespace Rei01.Buhin
 {
     internal sealed class Youki : IBuhin
     {
-        private List<IBuhin> _buhins = new List<IBuhin>(); 
+        private List<IBuhin> _buhins = new List<IBuhin>();
+
+        public Youki(string name)
+        {
+            Name = name;
+        }
+
+        public string Name { get; }
         public void Execute()
         {
             MessageBox.Show("容器です");
@@ -23,5 +30,11 @@ namespace Rei01.Buhin
         {
             _buhins.Add(buhin);
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
 }
