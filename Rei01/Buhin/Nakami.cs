@@ -10,7 +10,7 @@
         public string Name { get; }
         public void Execute()
         {
-            MessageBox.Show("中身です。");
+            MessageBox.Show(Name);
         }
 
         public override string ToString()

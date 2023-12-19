@@ -18,7 +18,7 @@ namespace Rei01.Buhin
         public string Name { get; }
         public void Execute()
         {
-            MessageBox.Show("容器です");
+            MessageBox.Show(Name);
 
             foreach (var buhin in _buhins)
             {
