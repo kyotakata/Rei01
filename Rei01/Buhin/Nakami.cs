@@ -19,7 +19,7 @@ namespace Rei01.Buhin
 
         public void Add(IBuhin buhin)
         {
-            throw new ArgumentException($"NakamiにAddはできませんId={buhin.Id}");
+            throw new NakamiAddException(Id);
         }
 
         public void Execute()
