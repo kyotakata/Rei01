@@ -7,25 +7,17 @@ using System.Threading.Tasks;
 
 namespace Rei01.Buhin
 {
-    internal sealed class Youki : IBuhin
+    internal sealed class Youki : BuhinBase
     {
-        private List<IBuhin> _buhins = new List<IBuhin>();
-        private KaisouEntity _entity;
+        private List<BuhinBase> _buhins = new List<BuhinBase>();
 
         public Youki(KaisouEntity entity)
+            :base(entity)
         {
-            _entity = entity;
         }
 
-        public string Name => _entity.Name;
 
-        public int Lebel => _entity.Lebel;
-
-        public int Id => _entity.Id;
-
-        public int ParentId => _entity.PearentId;
-
-        public void Execute()
+        public override void Execute()
         {
             MessageBox.Show(Name);
 
@@ -35,7 +27,7 @@ namespace Rei01.Buhin
             }
         }
 
-        public void Add(IBuhin buhin)
+        public override void Add(BuhinBase buhin)
         {
             _buhins.Add(buhin);
         }

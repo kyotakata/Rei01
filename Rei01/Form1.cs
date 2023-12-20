@@ -5,7 +5,7 @@ namespace Rei01
 {
     public partial class Form1 : Form
     {
-        private List<IBuhin> _buhins = new List<IBuhin>();
+        private List<BuhinBase> _buhins = new List<BuhinBase>();
 
         public Form1()
         {
@@ -74,7 +74,7 @@ namespace Rei01
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var buhin = listBox1.SelectedItem as IBuhin;
+            var buhin = listBox1.SelectedItem as BuhinBase;
             if (buhin == null)
             {
                 return;
