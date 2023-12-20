@@ -58,6 +58,14 @@ namespace Rei01
                 }
             }
 
+            foreach (var buhin in _buhins)
+            {
+                var parent = _buhins.Find(x => x.Id == buhin.ParentId);
+            }
+
+
+            listBox1.DataSource = _buhins;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

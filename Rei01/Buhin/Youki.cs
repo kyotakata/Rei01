@@ -20,6 +20,11 @@ namespace Rei01.Buhin
         public string Name => _entity.Name;
 
         public int Lebel => _entity.Lebel;
+
+        public int Id => _entity.Id;
+
+        public int ParentId => _entity.PearentId;
+
         public void Execute()
         {
             MessageBox.Show(Name);
