@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rei01.Buhin.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,16 @@ namespace Rei01.Buhin
     internal sealed class Youki : IBuhin
     {
         private List<IBuhin> _buhins = new List<IBuhin>();
+        private KaisouEntity _entity;
 
-        public Youki(string name, int lebel)
+        public Youki(KaisouEntity entity)
         {
-            Name = name;
-            Lebel = lebel;
+            _entity = entity;
         }
 
-        public string Name { get; }
+        public string Name => _entity.Name;
 
-        public int Lebel { get; }
+        public int Lebel => _entity.Lebel;
         public void Execute()
         {
             MessageBox.Show(Name);
