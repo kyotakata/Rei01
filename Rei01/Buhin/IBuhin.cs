@@ -12,6 +12,9 @@ namespace Rei01.Buhin
         int ParentId { get; }
         string Name { get; }
         int Lebel { get; }
+
         void Execute();
+        void Add(IBuhin buhin);
+
     }
 }

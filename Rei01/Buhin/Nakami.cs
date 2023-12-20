@@ -17,6 +17,11 @@ namespace Rei01.Buhin
 
         public int ParentId => _entity.PearentId;
 
+        public void Add(IBuhin buhin)
+        {
+            throw new ArgumentException($"NakamiにAddはできませんId={buhin.Id}");
+        }
+
         public void Execute()
         {
             MessageBox.Show(Name);
